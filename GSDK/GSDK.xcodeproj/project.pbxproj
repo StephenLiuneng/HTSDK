@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE839EE91E659FAB0040A2EC /* HTaaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE839EE81E659FAB0040A2EC /* HTaaa.swift */; };
 		F006FE8D1DB076BD0040122A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F006FE8C1DB076BD0040122A /* GoogleService-Info.plist */; };
 		F006FE931DB0E54B0040122A /* HTPostImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F006FE921DB0E54B0040122A /* HTPostImageTool.m */; };
 		F006FE951DB0E97A0040122A /* 000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F006FE941DB0E97A0040122A /* 000.jpg */; };
@@ -126,6 +127,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE839EE71E659FAA0040A2EC /* GSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		DE839EE81E659FAB0040A2EC /* HTaaa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTaaa.swift; sourceTree = "<group>"; };
 		F006FE8C1DB076BD0040122A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F006FE911DB0E54B0040122A /* HTPostImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTPostImageTool.h; sourceTree = "<group>"; };
 		F006FE921DB0E54B0040122A /* HTPostImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTPostImageTool.m; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				F07C8C871DB5C5A30075F76A /* HTPOSTImageArray.m */,
 				F07C8C891DB5D4A40075F76A /* HTUploadImage.h */,
 				F07C8C8A1DB5D4A40075F76A /* HTUploadImage.m */,
+				DE839EE81E659FAB0040A2EC /* HTaaa.swift */,
+				DE839EE71E659FAA0040A2EC /* GSDK-Bridging-Header.h */,
 			);
 			path = GSDK;
 			sourceTree = "<group>";
@@ -927,6 +932,7 @@
 					F069F5B71D5340A700AA59DE = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = Y7E36R995S;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
@@ -1057,6 +1063,7 @@
 				F0A24D251DB7559000139815 /* HTforgetPasswordController.m in Sources */,
 				F07C8C881DB5C5A30075F76A /* HTPOSTImageArray.m in Sources */,
 				F0A24D2C1DB7559000139815 /* HTCustomButtonView.m in Sources */,
+				DE839EE91E659FAB0040A2EC /* HTaaa.swift in Sources */,
 				F0A24D231DB7559000139815 /* HTFAQCell.m in Sources */,
 				F0A24D611DB755FF00139815 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F0A24D2A1DB7559000139815 /* HTAlbumController.m in Sources */,
@@ -1226,6 +1233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GSDK/GSDK.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1243,6 +1251,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GSDK/GSDK-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1250,6 +1261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GSDK/GSDK.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1266,12 +1278,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phoenix.zombie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GSDK/GSDK-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		F069F5E91D5340A700AA59DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1284,6 +1299,7 @@
 		F069F5EA1D5340A700AA59DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1296,6 +1312,7 @@
 		F069F5EC1D5340A700AA59DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GSDKUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gameHT.GSDKUITests;
@@ -1307,6 +1324,7 @@
 		F069F5ED1D5340A700AA59DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GSDKUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gameHT.GSDKUITests;
